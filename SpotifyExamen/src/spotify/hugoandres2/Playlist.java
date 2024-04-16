@@ -6,6 +6,11 @@ import java.util.List;
 //Poner comentario de la clase, con la descripción de qué es lo que hace  
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5
+/**
+ * Esta clase sirve para hacer varias funcionalidades en una lista de canciones
+ * @author Hugo Andres
+ * @version 1.5
+ */
 
 public class Playlist {
 
@@ -16,6 +21,10 @@ public class Playlist {
 	
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+	/**
+	 * Los minutos de obtienen dividiendo entre 60 a partir del dato int totalSegundos
+	 * @return double duración total en minutos
+	 */
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
@@ -25,6 +34,13 @@ public class Playlist {
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
+	/**
+	 * Busca en una lista si la cancion que se quiere agregar esta o no esta
+	 * @param nueva parametro tipo Cancion
+	 * @return boolean true si se encuentra, false si no
+	 * @since 1.0
+	 * @throws DatosInvalidosException
+	 */
 	public boolean agregarCancion(Cancion nueva) throws DatosInvalidosException {
 
 		boolean exito = false;
@@ -47,6 +63,11 @@ public class Playlist {
 	
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
+	/**
+	 * @param nombre parametro tipo String
+	 * @return boolean true si se encuentra, false si no
+	 * @since 1.5
+	 */
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -67,6 +88,13 @@ public class Playlist {
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
+	/**
+	 * 
+	 * @param nombreCancion parametro tipo String
+	 * @return boolean
+	 * @deprecated encontrarCancionPorNombre {@link ()}
+	 * @since 1.0
+	 */
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
