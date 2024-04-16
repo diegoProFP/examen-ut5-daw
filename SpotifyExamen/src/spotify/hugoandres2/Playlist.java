@@ -92,7 +92,7 @@ public class Playlist {
 	 * 
 	 * @param nombreCancion parametro tipo String
 	 * @return boolean
-	 * @deprecated encontrarCancionPorNombre {@link ()}
+	 * @deprecated encontrarCancion {@link #encontrarCancionPorNombre}
 	 * @since 1.0
 	 */
 	public boolean encontrarCancion(String nombreCancion) {
