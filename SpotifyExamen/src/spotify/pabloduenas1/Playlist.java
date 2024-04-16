@@ -1,12 +1,12 @@
 package spotify.pabloduenas1;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Esta clase es la de playlist
  * @author Pablo.duenas1
  * @version 1.5
  */
-import java.util.ArrayList;
-import java.util.List;
-
 //Poner comentario de la clase, con la descripción de qué es lo que hace  
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5
