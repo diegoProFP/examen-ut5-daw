@@ -7,6 +7,12 @@ import java.util.List;
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5
 
+
+/**
+ * @author Sonia Perez
+ * @version 1.0
+ */
+
 public class Playlist {
 
 	private String nombre;
@@ -14,6 +20,12 @@ public class Playlist {
 	private List<Cancion> canciones;
 
 	
+	/**
+	 * 
+	 * @return Aqui devuelve el Total de segundos 
+	 * Es un metodo donde la variable totaldesegundos se divide entre 60 para saber la duracion total
+	 * 
+	 */
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
 	public double obtenerDuracionTotal() {
@@ -21,7 +33,12 @@ public class Playlist {
 	}
 		
 		
-		
+		/**
+		 * 
+		 * @param Aqui tenemos un metodo booleano donde te dice si la cancion esat o no esta ya en el ArrayList. El parametro nueva es de la clase Cancion
+		 * @return Devuelve si existev ya la cancion un false
+		 * @throws DatosInvalidosException
+		 */
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
@@ -44,7 +61,11 @@ public class Playlist {
 	}
 
 
-	
+	/**
+	 * 
+	 * @param nombre es un String y te dice como se llama la cancion. Este metodo encuentra la cancion por su nombre
+	 * @return Te devuekve la cacnion encontrada
+	 */
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
 	public boolean encontrarCancionPorNombre(String nombre) {
@@ -64,6 +85,13 @@ public class Playlist {
 		return encontrado;
 	}
 	
+	/**
+	 * 
+	 * @param nombreCancion Es un String y te dice su nombre
+	 * @return Te devolvia su nombre pero ya tiene una version mejor
+	 * @deprecated Tiene una nueva funcionalidad mejor y mas actualizada 
+	 * 
+	 */
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
