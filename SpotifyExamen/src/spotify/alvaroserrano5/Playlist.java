@@ -1,5 +1,11 @@
 package spotify.alvaroserrano5;
 
+/**
+ * @author alvaro.serrano5
+ * @version 1.5
+ * la clase describe la clase playlist con metodos como el de obtener la duracion de una cancion en minutos o agregar canciones
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +22,13 @@ public class Playlist {
 	
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+	
+	/**
+	 * 
+	 * @return el la duracion total de una cancion en minutos
+	 * con este metodo usamos el total en segundos y lo dividimos entre 60 para que te de los minutos
+	 */
+	
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
@@ -25,6 +38,20 @@ public class Playlist {
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
+	
+	/**
+	 * este es un metodo en el que se hace el proceso de añadir una cancion a la playlist
+	 * 
+	 * @param nueva nombre dado a la cancion que a sido añadida recientemente
+	 * 
+	 * @return si a tenido exito el proceso de añadir una cancion en la playlist
+	 * 
+	 * @see {@link #Cancion}
+	 * @see {@link #DatosInvalidosException}
+	 * 
+	 * @since 1.0
+	 */
+	
 	public boolean agregarCancion(Cancion nueva) throws DatosInvalidosException {
 
 		boolean exito = false;
@@ -47,6 +74,17 @@ public class Playlist {
 	
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
+	
+	/**
+	 * es un metodo en el que compara que el nombre de la cancion obtenida en cada vuelta es igual a la que se quiere
+	 * 
+	 * @param nombre el nombre de la cancion
+	 * 
+	 * @since 1.5
+	 * 
+	 * @return devuelve si a encontrado la cancion obtenida con la que se quiere
+	 */
+	
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -67,6 +105,19 @@ public class Playlist {
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
+	
+	/**
+	 * es un metodo en el que compara que el nombre de la cancion obtenida en cada vuelta es igual a la que se quiere
+	 * 
+	 * @param nombreCancion el nombre de la cancion
+	 * 
+	 * @deprecated metodo obsoleto para encontrar una cancion {@link #encontrarCancionPorNombre(String)}
+	 * 
+	 * @since 1.0
+	 * 
+	 * @return devuelve si a encontrado la cancion obtenida con la que se quiere
+	 */
+	
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
