@@ -1,5 +1,9 @@
 package spotify.pabloduenas1;
-
+/**
+ * Esta clase es la de playlist
+ * @author Pablo.duenas1
+ * @version 1.5
+ */
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +20,10 @@ public class Playlist {
 	
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+	/**
+	 * Este metodo es para obtener la duracion en segundos
+	 * @return devuelve la duracion en segundos
+	 */
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
@@ -25,6 +33,14 @@ public class Playlist {
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
+	/**
+	 * Este metodo es para agregar canciones
+	 * @param nueva es de tipo Cancion
+	 * @return devuelve si ha podido agregar la cancion o no
+	 * @throws DatosInvalidosException te devuelve una excepcion si no tiene nombre la cancion
+	 * @see Cancion DatosInvalidosException
+	 * @since 1.0
+	 */
 	public boolean agregarCancion(Cancion nueva) throws DatosInvalidosException {
 
 		boolean exito = false;
@@ -47,6 +63,12 @@ public class Playlist {
 	
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
+	/**
+	 * Este metodo es para encontrar una cancion
+	 * @param nombre es de tipo String
+	 * @return devuelve si ha encontrado la cancion o no
+	 * @since 1.5
+	 */
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -67,6 +89,11 @@ public class Playlist {
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
+	/**
+	 * @deprecated este metodo esta obsoleto y lo sustituye encontrarCancionPorNombre
+	 * {@link #encontrarCancionPorNombre(String)}
+	 * @since 1.0
+	 */
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
