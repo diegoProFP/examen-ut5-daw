@@ -2,10 +2,12 @@ package spotify.oruizfernandez;
 
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * @version 1.5
+ * @author oruizfernandez@educa.madrid.org
+ * Esta clase te permite realizar 
+ */
 
-//Poner comentario de la clase, con la descripción de qué es lo que hace  
-//De autor poned vuestro email de educaMadrid. 
-//La version de la clase es la 1.5
 
 public class Playlist {
 
@@ -13,18 +15,25 @@ public class Playlist {
 	private int totalSegundos;
 	private List<Cancion> canciones;
 
-	
-	// Poner descripcion, valor de retorno.
+	/**
+	 * @return totalsegundos 
+	 * devuelve el numero total de segundos que dura la cancion.
+	 */
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+	
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
 		
-		
-		
-	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
-	// referenciar tanto a las clases Cancion y DatosInvalidosException
-	//Existe desde la version 1.0
+		/**
+		 * @param nueva
+		 * @return 
+		 * @throws DatosInvalidosException
+		 * @since 1.0
+		 * @see {@link #Cancion}
+		 * @see {@link #DatosInvalidosException}
+		 */
+	
 	public boolean agregarCancion(Cancion nueva) throws DatosInvalidosException {
 
 		boolean exito = false;
@@ -44,9 +53,14 @@ public class Playlist {
 	}
 
 
-	
+	/**
+	 * @since 1.5
+	 * @param nombre nombre de la cancion
+	 * @return devuelve la cancion buscada
+	 * Este metodo es la version mejorada del metodo {@Link #encontrarCancion(String)}
+	 */
 	// Poner descripcion, parametros de entrada, valor de retorno.
-	//Existe desde la version 1.5
+	
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -63,10 +77,13 @@ public class Playlist {
 
 		return encontrado;
 	}
-	
-	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
-	// encontrarCancionPorNombre(String nombre)
-	//Existe desde la version 1.0
+	/**
+	 * @since 1.0
+	 * @deprecated este metodo esta obsoleto y lo sustituye el metodo {@link #encontrarCancionPorNombre(String)}
+	 * @param nombreCancion nombvre de la cacion
+	 * @return devuelve la cancion buscada
+	 */
+
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
