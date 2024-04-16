@@ -6,6 +6,11 @@ import java.util.List;
 //Poner comentario de la clase, con la descripción de qué es lo que hace  
 //De autor poned vuestro email de educaMadrid. 
 //La version de la clase es la 1.5
+/**
+ * Esta clase actua como playlist, donde se agrega y busca objetos canciones.
+ * @author ayman.assidah
+ * @version 1.5
+ */
 
 public class Playlist {
 
@@ -16,6 +21,10 @@ public class Playlist {
 	
 	// Poner descripcion, valor de retorno.
 	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
+	/**
+	 * Metodo que suma la duracion total de la playlist.
+	 * @return los valores
+	 */
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
 	}
@@ -25,6 +34,13 @@ public class Playlist {
 	// Poner descripcion, parametros de entrada, valor de retorno, y excepción. Además que pueda
 	// referenciar tanto a las clases Cancion y DatosInvalidosException
 	//Existe desde la version 1.0
+	/**
+	 * En este metodo se agregara la nueva cancion que  recibira en el parametro nueva del tipo Cancion.
+	 * @param nueva Agrega una nueva cancion a la playlist.
+	 * @return Devolvera el boolean exito como true si no da error.
+	 * @throws DatosInvalidosException si los valores que recibe no son validos.
+	 * @since 1.0
+	 */
 	public boolean agregarCancion(Cancion nueva) throws DatosInvalidosException {
 
 		boolean exito = false;
@@ -47,6 +63,12 @@ public class Playlist {
 	
 	// Poner descripcion, parametros de entrada, valor de retorno.
 	//Existe desde la version 1.5
+	/**
+	 * Este metodo se encargara de buscar la cancion que coincida con el parametro nombre.
+	 * @param nombre Se usara para compararlo con los nombres de las canciones.
+	 * @return Devolvera true si la cancion ha sido encontrada y false si no lo ha sido.
+	 * @since 1.5
+	 */
 	public boolean encontrarCancionPorNombre(String nombre) {
 		boolean encontrado = false;
 		int contador = 0;
@@ -67,6 +89,13 @@ public class Playlist {
 	// Este metodo está deprecado porque se ha hecho uno mejor, y el que lo sustituye es el
 	// encontrarCancionPorNombre(String nombre)
 	//Existe desde la version 1.0
+	/**
+	 * Este metodo encuentra la cancion por el nombre.
+	 * @param nombreCancion Este parametro se comparara con los nombres de las canciones.
+	 * @return True si la cancion ha sido encontrada y false si no lo ha sido.
+	 * @deprecated Este metodo esta obsoleto.
+	 * @since 1.0
+	 */
 	public boolean encontrarCancion(String nombreCancion) {
 		boolean encontrado = false;
 
