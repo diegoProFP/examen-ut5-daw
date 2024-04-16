@@ -5,9 +5,8 @@ import java.util.List;
 /**
  * @version 1.5
  * @author oruizfernandez@educa.madrid.org
- * Esta clase te permite realizar 
+ * Esta clase simula spotify la cual te devuelve los segundos que dura una cación permite añadir canciones a la playlist y buscar canciones.
  */
-
 
 public class Playlist {
 
@@ -16,10 +15,10 @@ public class Playlist {
 	private List<Cancion> canciones;
 
 	/**
+	 * devuelve cuanto dura la cancion en minutos a partir de totalsegundos y diviendolo entre 60
 	 * @return totalsegundos 
-	 * devuelve el numero total de segundos que dura la cancion.
+	 * devuelve el numero total de minutos que dura la cancion.
 	 */
-	//En los comentarios describir cómo se obtienen los minutos y a partir de qué dato de la clase.
 	
 	public double obtenerDuracionTotal() {
 		return (double) totalSegundos / 60;
@@ -27,7 +26,7 @@ public class Playlist {
 		
 		/**
 		 * @param nueva
-		 * @return 
+		 * @return añade la cancion a la playlist
 		 * @throws DatosInvalidosException
 		 * @since 1.0
 		 * @see {@link #Cancion}
@@ -66,8 +65,7 @@ public class Playlist {
 		int contador = 0;
 		while (!encontrado && contador < canciones.size()) {
 
-			// Si el nombre de la cancion obtenida en cada vuelta es igual a la que se
-			// quiere
+
 			if (canciones.get(contador).getNombre().equalsIgnoreCase(nombre)) {
 				encontrado = true;
 			}
