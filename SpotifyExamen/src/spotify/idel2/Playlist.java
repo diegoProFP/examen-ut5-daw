@@ -7,8 +7,8 @@ import java.util.List;
  * Clase que representa una lista de reproducción de canciones.
  * Permite gestionar el nombre de la lista, la duración total en minutos
  * y las canciones que contiene.
- * Autor: tuemail@educaMadrid
- * Version: 1.5
+ * @Autor: idel02@educaMadrid
+ * @Version: 1.5
  */
 public class Playlist {
 
@@ -109,3 +109,5 @@ public class Playlist {
         this.canciones = canciones;
     }
 }
+
+
